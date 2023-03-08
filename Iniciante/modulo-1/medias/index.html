@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinamicas</title>
+</head>
+<body>
+    <h1>Imagens que se ajustam com o tamanho da tela</h1>
+    <picture>
+        <source media="(max-width: 725px)" srcset="imagens/imagem-p.png" type="image/png">
+        <source media="(max-width: 1025px)" srcset="imagens/imagem-m.png" type="image/png">
+        <img src="imagens/imagem-g.png" alt="imagem-g">
+    </picture>
+    <h1>Aúdios</h1>
+    <!--Essa forma de aúdio faz com que se não der para carregar um tipo de audio no 
+    seu navegador ele tenta carregar outro tipo (se vc tiver colocado outro tipo)-->
+    <audio preload="metadata" controls>
+        <source src="audios/god-rest.mp3" type="audio/mpeg">
+        <source src="audios/god-rest.ogg" type="audio/ogg">
+        <p>Seu navegador não é compativel com os tipos mpeg e ogg</p>
+    </audio>
+    <h1>Vídeos Locais</h1>
+    <!--Funciona da mesma forma que o áudio, se n for compativel ele vê se a próxima
+    opção é-->
+    <video controls width="500" poster="imagens/capa.jpg" loop>
+        <source src="videos/V2.mp4" type="video/mp4">
+        <source src="videos/V3.webm" type="video/webm">
+        <p>Seu navegador não é compativel com os tipos mp4 e webm</p>
+    </video>
+    <h1>Vídeos por Links</h1>
+    <p>Esse vídeos você pega na parte escrita <q>incorporar</q>.</p>
+    <p>Lembrando que essa forma é a mais barata.</p>
+    <iframe width="500" height="315" src="https://www.youtube.com/embed/OzUnqQk4eOg" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen></iframe>
+</body>
+</html>

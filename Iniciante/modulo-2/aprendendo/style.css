@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(156, 156, 156);
+    padding: 0px;
+    margin: 0px;
+}
+
+nav {
+    background-color: white;
+    padding: 10px 8px;
+    margin: 0px;
+}
+nav > section {
+    display: inline-block;
+    height: 30px;
+    width: 120px;
+    background-color: #687EDB;
+    border-radius: 8px;
+    padding: 10px 0px 4px 0px;
+    text-align: center;
+}
+section > a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+}
+#inicio {
+    text-align: center;
+    background-color: #7166F2;
+    color: white;
+    margin: 18px 10px;
+}
+
+main {
+    background-color: white;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    border-radius: 10px 0px;
+}
+article > aside {
+    height: 100px;
+    width: 150px;
+    background-color: rgb(173, 173, 173);
+    margin: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 18px 10px;
+}
+footer > p {
+    margin: 0px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: gainsboro;
+        }
+        h1 {
+            margin: 20px 0px;
+            text-align: center;
+        }
+        nav {
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.377);
+        }
+        header > nav{
+            height: 22px;
+            background-color: rgb(168, 168, 168);
+            padding: 11px 0px;
+            height: 30px;
+        }
+        nav > div > a {
+            text-decoration: none;
+            color:rgb(121, 66, 172);
+        }
+        nav > div > a:hover {
+            text-decoration: underline;
+            color:rgb(151, 87, 211);
+        }
+        nav > div > a:active {
+            color: rgb(176, 122, 228);
+        }
+        footer {
+            background-color: rgb(31, 31, 31);
+            color:white;
+            text-align: center;
+            padding: 12px 0px;
+            margin: 0px;
+        }
+        footer > p {
+            margin: 0px;
+        }
+        article {
+            width: 335px;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(190, 190, 190)
+        }
+        section > h2 {
+            text-align: center;
+        }
+        main {
+            margin: 25px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px 0px;
+            box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.226);;
+        }
+        div#sessao {
+            background-color: white;
+            border-radius: 5px;
+            display: inline-block;
+            margin: auto 10px;
+            padding: 8px;
+        }
+    </style>
+    <title>Página Inicial</title>
+</head>
+<body>
+    <!--Isso é o cabeçalho-->
+    <header>
+        <h1>Página Inicial</h1>
+        <nav>
+            <div id="sessao">
+                <a href="#">Filmes</a>
+            </div>
+            <div id="sessao">
+                <a href="#">Jogos</a>
+            </div>  
+            <div id="sessao">
+                <a href="#">Séries</a>
+            </div> 
+            <div id="sessao">
+                <a href="#">Quentes</a>
+            </div> 
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Em Alta</h2>
+            <article>
+                <a href="#"><img src="artigos.png" alt="artigo"></a>
+            </article>
+            <article>
+                <a href="#"><img src="artigos.png" alt="artigo"></a>
+            </article>
+            <article>
+                <a href="#"><img src="artigos.png" alt="artigo"></a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito por João Pedro</p>
+    </footer>
+</body>
+</html>

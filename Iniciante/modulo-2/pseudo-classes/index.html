@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        div:hover {
+            /*Nesse caso esse hover é o que analiza se eu passar o mouse faça alguma coisa*/
+            color: red;
+        }
+        /* > children
+           : pseudo class
+           :: pseudo element */
+        div > p {
+            display: none;
+        }
+        div:hover > p {
+            display: block;
+            color: black;
+        }
+
+        a {
+            color:cadetblue;
+            text-decoration: none;
+        }
+        a:hover {
+            color:rgb(109, 179, 182);
+        }
+        a:active {
+            color:rgb(136, 226, 230);
+        }
+        .linkespecial::after {
+            content: '[link]';
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo Classes</h1>
+    <p>Essas são legais, é tipo assim quando algo acontecer faça isso.</p>
+    <div>
+        Passe o mouse aqui.
+        <p>Achou !!!</p>
+    </div>
+
+    <h2>Outro Teste</h2>
+    <ul>
+        <li><a href="https://color.adobe.com/pt/create/color-wheel" target="_blank">site 1</a></li>
+        <li><a href="https://unsplash.com/pt-br" target="_blank">site 2</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank">site 3</a></li>
+    </ul>
+    <h1>Pseudo Elementos</h1>
+    <p>Essa da para modificar a conteúdo é muito parecido com o pseudo classes</p>
+    <h2>Exemplo</h2>
+    <ul>
+        <li class="linkespecial"><a href="https://color.adobe.com/pt/create/color-wheel" target="_blank">site 1</a></li>
+        <li class="linkespecial"><a href="https://unsplash.com/pt-br" target="_blank">site 2</a></li>
+        <li class="linkespecial"><a href="https://www.youtube.com/" target="_blank">site 3</a></li>
+    </ul>
+</body>
+</html>
