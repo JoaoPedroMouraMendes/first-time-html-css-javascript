@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
+
+:root {
+    --cor0:rgb(200, 200, 200);
+    --cor1:rgb(150, 150, 150);
+    --cor2:rgba(100, 100, 100, 0.515);
+    --cor3:rgb(50, 50, 50);
+
+    --fonteTexto: 'Sriracha', cursive;
+    --fontePadrao: Verdana, Geneva, Tahoma, sans-serif;
+    --fonteTitulo: 'Passion One', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--fontePadrao);
+}
+
+header {
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+header h1 {
+    font-size: 8vw;
+    font-variant:small-caps;
+    margin-bottom: 5px;
+    font-family: var(--fonteTitulo);
+}
+
+header p {
+    font-size: 3vw;
+}
+
+header a, footer a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+main section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    font-family: var(--fonteTexto);
+}
+
+section.semImagem {
+    background-color:white;
+    color:black;
+}
+
+section.semImagem p {
+    margin-bottom: 2.5em;
+}
+
+section.comImagem {
+    box-shadow: inset 7px 7px 14px 0px rgba(0, 0, 0, 0.555);
+}
+
+section.comImagem p {
+    background-color: var(--cor2);
+    color:white;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid white;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.600);
+}
+
+#imagem1 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#imagem2 {
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main section p {
+    font-size: 3.75vw;
+    line-height: 1.75em;
+}
+
+footer {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
