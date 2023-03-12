@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            /*Isso tira o espaçamento das bordas*/
+            border-collapse: collapse;
+            width: 300px;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        #tabela2 {
+            width: 300px;
+            height: 300px;
+        }
+
+        #tabela2 td {
+            /*Usado para alinhamento horizontal*/
+            text-align: center;
+            /*Usado para alinhamento vertical
+            OBS: para ficar no meio não se usa "center" ao invés disso usa "middle"*/
+            vertical-align: top;
+        }
+
+        #tabela3 {
+            width: 300px;
+            position: relative;
+        }
+
+        #tabela3 caption {
+            border: 1px solid black;
+            border-bottom: 0px;
+            background-color: rgb(185, 185, 185);
+            color:black;
+            font-size: 1.25em;
+            padding: 5px;
+        }
+
+        /*Isso é para fazer com que o cabeçalho da tabela acompanhe*/
+        #tabela3 thead > tr > th {
+            position:sticky;
+            top: 0px;
+        }
+
+        #tabela3 thead th {
+            border: 1px solid black;
+            padding: 5px;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            max-width: 100px;
+        }
+
+        #tabela3 tbody tr:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        #tabela3 tbody tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        .nome {
+            text-align: center;
+        }
+
+        .numero {
+            text-align: right;
+        }
+
+        #tabela3 tfoot th {
+            border: 1px solid black;
+            background-color: gray;
+            color:white;
+        }
+
+        #tabela3 tfoot td {
+            text-align: right;
+            background-color: gray;
+            color:white;
+        }
+
+    </style>
+    <title>Tabelas</title>
+</head>
+<body>
+    <h1>Tabela Simples</h1>
+    <!--Hierarquia de tabelas (simples)
+    table = tabela
+        table row (tr) = linha da tabela
+            table header (th) = cabeçalho da tabela
+            table data (td) = dado da tabela-->
+
+    <table>
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+
+    <h1>Tabela com Alinhamento</h1>
+
+    <table id="tabela2">
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+
+    <h1>Tabela Maior</h1>
+    <!--Uma tabela maior pode ter mais elementos para facilitar a criação de tal, usando:
+    table
+        caption (é meio que o titulo da tabela)
+        thead (aqui seria destinado mais ao cabeçalho)
+        tbody (aqui o conteúdo)
+        tfoot (rodapé)-->
+    <!--Detalhe importante: é importante indicar onde os dados estão sendo exibidos em uma tabela e para isso se usa o scope, ele você usa no th indicando onde está presente o dado desse th-->
+
+    <table id="tabela3">
+        <caption>Famílias do Bairro</caption>
+        <thead>
+            <tr>
+                <th class="nome" scope="col">Família</th>
+                <th class="numero" scope="col">Quantidade de Membros</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="nome">Mendes</td>
+                <td class="numero">10</td>
+            </tr>
+            <tr>
+                <td class="nome">Moura</td>
+                <td class="numero">4</td>
+            </tr>
+            <tr>
+                <td class="nome">Silva</td>
+                <td class="numero">3</td>
+            </tr>
+            <tr>
+                <td class="nome">Rezende</td>
+                <td class="numero">2</td>
+            </tr>
+            <tr>
+                <td class="nome">Machado</td>
+                <td class="numero">4</td>
+            </tr>
+            <tr>
+                <td class="nome">Santos</td>
+                <td class="numero">6</td>
+            </tr>
+            <tr>
+                <td class="nome">Rodrigues</td>
+                <td class="numero">2</td>
+            </tr>
+            <tr>
+                <td class="nome">Solza</td>
+                <td class="numero">3</td>
+            </tr>
+            <tr>
+                <td class="nome">Mendes</td>
+                <td class="numero">10</td>
+            </tr>
+            <tr>
+                <td class="nome">Moura</td>
+                <td class="numero">4</td>
+            </tr>
+            <tr>
+                <td class="nome">Silva</td>
+                <td class="numero">3</td>
+            </tr>
+            <tr>
+                <td class="nome">Rezende</td>
+                <td class="numero">2</td>
+            </tr>
+            <tr>
+                <td class="nome">Machado</td>
+                <td class="numero">4</td>
+            </tr>
+            <tr>
+                <td class="nome">Santos</td>
+                <td class="numero">6</td>
+            </tr>
+            <tr>
+                <td class="nome">Rodrigues</td>
+                <td class="numero">2</td>
+            </tr>
+            <tr>
+                <td class="nome">Solza</td>
+                <td class="numero">3</td>
+            </tr>
+            <tr>
+                <td class="nome">Mendes</td>
+                <td class="numero">10</td>
+            </tr>
+            <tr>
+                <td class="nome">Moura</td>
+                <td class="numero">4</td>
+            </tr>
+            <tr>
+                <td class="nome">Silva</td>
+                <td class="numero">3</td>
+            </tr>
+            <tr>
+                <td class="nome">Rezende</td>
+                <td class="numero">2</td>
+            </tr>
+            <tr>
+                <td class="nome">Machado</td>
+                <td class="numero">4</td>
+            </tr>
+            <tr>
+                <td class="nome">Santos</td>
+                <td class="numero">6</td>
+            </tr>
+            <tr>
+                <td class="nome">Rodrigues</td>
+                <td class="numero">2</td>
+            </tr>
+            <tr>
+                <td class="nome">Solza</td>
+                <td class="numero">3</td>
+            </tr>
+            <tr>
+                <td class="nome">Mendes</td>
+                <td class="numero">10</td>
+            </tr>
+            <tr>
+                <td class="nome">Moura</td>
+                <td class="numero">4</td>
+            </tr>
+            <tr>
+                <td class="nome">Silva</td>
+                <td class="numero">3</td>
+            </tr>
+            <tr>
+                <td class="nome">Rezende</td>
+                <td class="numero">2</td>
+            </tr>
+            <tr>
+                <td class="nome">Machado</td>
+                <td class="numero">4</td>
+            </tr>
+            <tr>
+                <td class="nome">Santos</td>
+                <td class="numero">6</td>
+            </tr>
+            <tr>
+                <td class="nome">Rodrigues</td>
+                <td class="numero">2</td>
+            </tr>
+            <tr>
+                <td class="nome">Solza</td>
+                <td class="numero">3</td>
+            </tr>
+            <tr>
+                <td class="nome">Santos</td>
+                <td class="numero">6</td>
+            </tr>
+            <tr>
+                <td class="nome">Rodrigues</td>
+                <td class="numero">2</td>
+            </tr>
+            <tr>
+                <td class="nome">Solza</td>
+                <td class="numero">3</td>
+            </tr>
+            <tr>
+                <td class="nome">Mendes</td>
+                <td class="numero">10</td>
+            </tr>
+            <tr>
+                <td class="nome">Moura</td>
+                <td class="numero">4</td>
+            </tr>
+            <tr>
+                <td class="nome">Silva</td>
+                <td class="numero">3</td>
+            </tr>
+            <tr>
+                <td class="nome">Rezende</td>
+                <td class="numero">2</td>
+            </tr>
+            <tr>
+                <td class="nome">Machado</td>
+                <td class="numero">4</td>
+            </tr>
+            <tr>
+                <td class="nome">Santos</td>
+                <td class="numero">6</td>
+            </tr>
+            <tr>
+                <td class="nome">Rodrigues</td>
+                <td class="numero">2</td>
+            </tr>
+            <tr>
+                <td class="nome">Solza</td>
+                <td class="numero">3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total</th>
+                <td>185</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
