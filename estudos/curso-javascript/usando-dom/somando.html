@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin:0px;
+            padding:0px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(91, 171, 197);
+        }
+
+        h1 {
+            text-align: Center;
+            color: white;
+            margin: 20px 0px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.700);
+        }
+
+        section {
+            display: block;
+            margin: auto;
+            max-width: 400px;
+            height: 100px;
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.300);
+        }
+
+        #num1, #num2 {
+            max-width: 70px;
+        }
+
+        #botao {
+            margin-left: 15px;
+            padding: 4px;
+            background-color: rgb(255, 168, 7);
+            border: 1px solid rgb(25, 32, 41);
+            border-radius: 5px;
+        }
+
+        section p {
+            margin-top: 10px;
+        }
+    </style>
+    <title>Soma de valores</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora de soma</h1>
+    </header>
+    <section>
+        <input type="number" name="num1" id="num1"> +
+        <input type="number" name="num2" id="num2">
+        <input type="button" value="Somar" onclick="somar()" id="botao">
+        <p id="resultado"></p>
+    </section>
+
+    <script>
+        function somar() {
+            let input1 = window.document.getElementById('num1');
+            let input2 = window.document.getElementById('num2');
+            let valor1 = Number(input1.value);
+            let valor2 = Number(input2.value);
+            let valorSoma = valor1 + valor2;
+            
+            if (valor1 == [0] || valor2 == [0]) {
+                alert('Valor inválido');
+                return;
+            }
+
+            let resultado = window.document.getElementById('resultado');
+            resultado.innerHTML = `A soma entre ${valor1} e ${valor2} é <strong>${valorSoma}</strong>`
+        }
+    </script>
+</body>
+</html>

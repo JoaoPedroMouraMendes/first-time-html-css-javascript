@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div#bloco1 {
+            background-color: lightcoral;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            padding: 10px;
+        }
+
+        div#bloco2 {
+            background-color: lightskyblue;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            padding: 10px;
+        }
+    </style>
+    <title>DOM</title>
+</head>
+<body>
+    <!--Essa é uma das formas de usar eventos-->
+    <div id="bloco1" onmouseenter="entrar()" onclick="clicar()" onmouseout="sair()">
+        chegue mais perto
+    </div>
+
+    <!--Essa já é uma forma de usar evento com tudo pelo js-->
+    <div id="bloco2">
+        chegue mais perto
+    </div>
+
+    <script>
+        //Forma com os evento mensionados pelo html
+        let bloco1 = window.document.getElementById('bloco1');
+
+        function entrar() {
+            bloco1.innerText = 'agora clique';
+        }
+
+        function clicar() {
+            bloco1.innerText = 'agora saia!'
+        }
+
+        function sair() {
+            bloco1.innerText = 'chegue mais perto'
+        }
+
+        //Eventos direto no js
+        let bloco2 = window.document.getElementById('bloco2');
+        bloco2.addEventListener('click', clicar2);
+        bloco2.addEventListener('mouseenter', entrar2);
+        bloco2.addEventListener('mouseout', sair2);
+
+        function entrar2() {
+            bloco2.innerText = 'agora clique';
+        }
+
+        function clicar2() {
+            bloco2.innerText = 'agora saia!'
+        }
+
+        function sair2() {
+            bloco2.innerText = 'chegue mais perto'
+        }
+    </script>
+</body>
+</html>

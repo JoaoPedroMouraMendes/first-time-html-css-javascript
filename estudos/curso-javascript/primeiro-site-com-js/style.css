@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgb(112, 150, 230);
+    background-color: rgb(71, 67, 97);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -26,6 +26,10 @@ section {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.350);
     margin-bottom: 30px;
     text-align: center;
+}
+
+div {
+    padding: 10px;
 }
 
 footer {
