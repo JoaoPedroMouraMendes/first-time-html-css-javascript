@@ -7,7 +7,7 @@ function carregar() {
     //Pegando as horas
     var data = new Date();
     var horas = data.getHours();
-    horas = 15;
+    
     //Aplicando as horas na tag
     msg.innerText = `Agora são ${horas} horas`
 
