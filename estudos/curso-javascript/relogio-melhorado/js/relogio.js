@@ -32,3 +32,17 @@ const calendario = setInterval(function time() {
 
     data.textContent = `${dia}/${mes}/${ano}`;
 })
+
+const rotina = setInterval(function time() {
+    const dateToday = new Date();
+    //Junta as horas com os minutos
+    let hr = `${dateToday.getHours()}` + `${dateToday.getMinutes()}`;
+    hr = parseInt(hr);
+
+    let rotinaAtual = detectarRotinaAtual(hr);
+
+    if (rotinaAtual == null) return;
+
+    const pRotina = document.querySelector('#afazer > span');
+    pRotina.innerHTML = rotinaAtual;
+})
