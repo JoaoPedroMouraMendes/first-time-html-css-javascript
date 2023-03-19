@@ -125,7 +125,7 @@ function verificarErros(inicioRot, fimRot) {
 
             if (hora == inicioHrSalva || hora == fimHrSalva) {
                 if (y == 0 && hora == fimHrSalva || y == duracaoRotinaHr && hora == inicioHrSalva) {} else {
-                    alert('[ERRO]');
+                    alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                     return true;
                 }
             }
@@ -135,7 +135,7 @@ function verificarErros(inicioRot, fimRot) {
                 for (minutos; minutos < fimMin; minutos++) {
                     if (hora == inicioHrSalva || hora == fimHrSalva) {
                         if (minutos == inicioMinSalva || minutos == fimMinSalva) {
-                            alert('[ERRO]');
+                            alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                             return true;
                         }
                     }
@@ -144,7 +144,7 @@ function verificarErros(inicioRot, fimRot) {
                 for (minutos; minutos < fimMin; minutos++) {
                     if (hora == inicioHrSalva || hora == fimHrSalva) {
                         if (minutos == inicioMinSalva || minutos == fimMinSalva) {
-                            alert('[ERRO]');
+                            alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                             return true;
                         }
                     }
@@ -153,7 +153,7 @@ function verificarErros(inicioRot, fimRot) {
                 for (minutos; minutos < 60; minutos++) {
                     if (hora == inicioHrSalva || hora == fimHrSalva) {
                         if (minutos == inicioMinSalva || minutos == fimMinSalva) {
-                            alert('[ERRO]');
+                            alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                             return true;
                         }
                     }
@@ -181,7 +181,7 @@ function verificarErros(inicioRot, fimRot) {
 
                 if (horaSalv == inicioHr || horaSalv == fimHr) {
                     if (z == 0 && horaSalv == fimHr || z == duracaoRotinaHrSalv && horaSalv == inicioHr) {} else {
-                        alert('[ERRO]');
+                        alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                         return true;
                     }
                 }
@@ -191,7 +191,7 @@ function verificarErros(inicioRot, fimRot) {
                     for (minutos; minutos < fimMinSalva; minutos++) {
                         if (horaSalv == inicioHr || horaSalv == fimHr) {
                             if (minutos == inicioMin || minutos == fimMin) {
-                                alert('[ERRO]');
+                                alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                                 return true;
                             }
                         }
@@ -200,7 +200,7 @@ function verificarErros(inicioRot, fimRot) {
                     for (minutos; minutos < fimMinSalva; minutos++) {
                         if (horaSalv == inicioHr || horaSalv == fimHr) {
                             if (minutos == inicioMin || minutos == fimMin) {
-                                alert('[ERRO]');
+                                alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                                 return true;
                             }
                         }
@@ -209,7 +209,7 @@ function verificarErros(inicioRot, fimRot) {
                     for (minutos; minutos < 60; minutos++) {
                         if (horaSalv == inicioHr || horaSalv == fimHr) {
                             if (minutos == inicioMin || minutos == fimMin) {
-                                alert('[ERRO]');
+                                alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                                 return true;
                             }
                         }
