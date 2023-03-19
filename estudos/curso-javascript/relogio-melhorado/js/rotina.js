@@ -133,8 +133,13 @@ function verificarErros(inicioRot, fimRot) {
             //Verifica os minutos
             if (duracaoRotinaHr == 0) {
                 for (minutos; minutos < fimMin; minutos++) {
-                    if (hora == inicioHrSalva || hora == fimHrSalva) {
-                        if (minutos == inicioMinSalva || minutos == fimMinSalva) {
+                    if (hora == inicioHrSalva) {
+                        if (minutos == inicioMinSalva) {
+                            alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
+                            return true;
+                        }
+                    } else if (hora == fimHrSalva) {
+                        if (minutos == fimMinSalva) {
                             alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                             return true;
                         }
@@ -142,8 +147,13 @@ function verificarErros(inicioRot, fimRot) {
                 }
             } else if (y == duracaoRotinaHr) {
                 for (minutos; minutos < fimMin; minutos++) {
-                    if (hora == inicioHrSalva || hora == fimHrSalva) {
-                        if (minutos == inicioMinSalva || minutos == fimMinSalva) {
+                    if (hora == inicioHrSalva) {
+                        if (minutos == inicioMinSalva) {
+                            alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
+                            return true;
+                        }
+                    } else if (hora == fimHrSalva) {
+                        if (minutos == fimMinSalva) {
                             alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                             return true;
                         }
@@ -151,8 +161,13 @@ function verificarErros(inicioRot, fimRot) {
                 }
             } else {
                 for (minutos; minutos < 60; minutos++) {
-                    if (hora == inicioHrSalva || hora == fimHrSalva) {
-                        if (minutos == inicioMinSalva || minutos == fimMinSalva) {
+                    if (hora == inicioHrSalva) {
+                        if (minutos == inicioMinSalva) {
+                            alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
+                            return true;
+                        }
+                    } else if (hora == fimHrSalva) {
+                        if (minutos == fimMinSalva) {
                             alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                             return true;
                         }
@@ -189,8 +204,13 @@ function verificarErros(inicioRot, fimRot) {
                 //Verifica os minutos
                 if (duracaoRotinaHrSalv == 0) {
                     for (minutos; minutos < fimMinSalva; minutos++) {
-                        if (horaSalv == inicioHr || horaSalv == fimHr) {
-                            if (minutos == inicioMin || minutos == fimMin) {
+                        if (horaSalv == inicioHr) {
+                            if (minutos == inicioMin) {
+                                alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
+                                return true;
+                            }
+                        } else if (horaSalv == fimHr) {
+                            if (minutos == fimMin) {
                                 alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                                 return true;
                             }
@@ -198,8 +218,13 @@ function verificarErros(inicioRot, fimRot) {
                     }
                 } else if (y == duracaoRotinaHrSalv) {
                     for (minutos; minutos < fimMinSalva; minutos++) {
-                        if (horaSalv == inicioHr || horaSalv == fimHr) {
-                            if (minutos == inicioMin || minutos == fimMin) {
+                        if (horaSalv == inicioHr) {
+                            if (minutos == inicioMin) {
+                                alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
+                                return true;
+                            }
+                        } else if (horaSalv == fimHr) {
+                            if (minutos == fimMin) {
                                 alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                                 return true;
                             }
@@ -207,14 +232,21 @@ function verificarErros(inicioRot, fimRot) {
                     }
                 } else {
                     for (minutos; minutos < 60; minutos++) {
-                        if (horaSalv == inicioHr || horaSalv == fimHr) {
-                            if (minutos == inicioMin || minutos == fimMin) {
+                        if (horaSalv == inicioHr) {
+                            if (minutos == inicioMin) {
+                                alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
+                                return true;
+                            }
+                        } else if (horaSalv == fimHr) {
+                            if (minutos == fimMin) {
                                 alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                                 return true;
                             }
                         }
                     }
                 }
+
+                minutos = 0;
             }
 
             minutos = 0;
