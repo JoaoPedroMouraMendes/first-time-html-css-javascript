@@ -1,3 +1,3 @@
-# Pasta de Projetos em html e css
+# Os Projetos :clipboard:
 
-Nessa pastas haverá projetos feito em html e css
+Nessa pasta você encontra todos os meus projetos.
