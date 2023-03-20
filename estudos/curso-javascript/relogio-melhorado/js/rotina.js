@@ -234,11 +234,11 @@ function verificarErros(inicioRot, fimRot) {
                     } else {
                         for (minutos; minutos < 60; minutos++) {
                             if (horaSalv == inicioHr) {
-                                if (minutos == inicioMin) {
-                                    alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
+                                if (minutos == inicioMin && inicioMinSalva >= inicioMin) {
+                                    alert('[ERROS] A rotina que você está tentando criar interfere em outra rotina');
                                     return true;
                                 }
-                            } else if (horaSalv == fimHr) {
+                            } else if (horaSalv == fimHr && fimMinSalva >= fimMin) {
                                 if (minutos == fimMin) {
                                     alert('[ERRO] A rotina que você está tentando criar interfere em outra rotina');
                                     return true;
