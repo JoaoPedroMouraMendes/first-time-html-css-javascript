@@ -1,2 +1,3 @@
-# HTML-e-CSS
- Esse é todo meu progresso com HTML e CSS.
+# Repositório de html css e javascript 
+
+ Nesse repositório está todo o meu progresso com as 3 linguagens citadas no titulo.
