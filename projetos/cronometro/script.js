@@ -43,6 +43,9 @@ function stop() {
 
     let stopwatch = document.getElementById('watch');
     stopwatch.innerHTML = `00:00:00<span id="milisec">:00</span>`;
+    
+    let pauseButton = document.getElementById('pause');
+    pauseButton.innerText = 'Pausar';
 }
 
 function watch() {
