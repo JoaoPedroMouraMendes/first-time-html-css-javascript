@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --color0: #84b6f4;
+    --color1: #bbd5f9;
+    --color2: #77dd77;
+    --color3: #cff6c8;
+    --color4: #ff6961;
+    --color5: #ffbeae;
+
+    --main-font: 'Roboto', sans-serif;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+
+    font-family: var(--main-font);
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#to-do {
+    background-color: var(--color1);
+}
+
+#to-do h1{
+    background-color: var(--color0);
+}
+
+#in-progress {
+    background-color: var(--color5);
+}
+
+#in-progress h1{
+    background-color: var(--color4);
+}
+
+#finish {
+    background-color: var(--color3);
+}
+
+#finish h1{
+    background-color: var(--color2);
+}
+
+.block {
+    background-color: lightblue;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 250px;
+    padding: 0px 20px 0px 20px;
+}
+
+.block h1 {
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+
+    margin: 0px -20px;
+    text-align: center;
+}
+
+.emoji {
+    text-shadow: none;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.note {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 5px;
+
+    background-color: white;
+}
+
+.note p {
+    display: block;
+}
+
+.button-list {
+    display: inline-block;
+}
+
+.note button {
+    display: inline;
+    background-color: transparent;
+    border: none;
+    margin: 0px 2px;
+
+    color: rgba(0, 0, 0, 0.7);
+}
+
+section > button {
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 3px;
+    border: none;
+
+    display: block;
+    margin: 10px auto 5px auto;
+    padding: 5px 55px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#note-name {
+    display: inline;
+    width: 150px;
+}
+
+#send-name {
+    background-color: #ffbeae;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
