@@ -29,6 +29,12 @@ body {
     position: relative;
 }
 
+header {
+    text-align: center;
+    padding: 10px 0px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
 main {
     display: flex;
     flex-wrap: wrap;

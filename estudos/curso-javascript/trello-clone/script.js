@@ -2,14 +2,15 @@ let totalCard = 0;
 let canMoveNote = false;
 let creatingNote = false;
 let currentDivClone;
+let inputName = `<input type="text" name="note-name" id="note-name"><button id="send-name" onclick="setName(this)"><i class="fa-solid fa-arrow-right"></i></button>`;
 
 function newCard(number) {
     return `
-<div id='${number}' class="note">
-    <p id='${'p'+number}'><input type="text" name="note-name" id="note-name"><button id="send-name" onclick="setName(this)"><i class="fa-solid fa-arrow-right"></i></button></p>
+<div id='d${number}' class="note">
+    <p id='${'p'+number}'>${inputName}</p>
     <div class="button-list">
         <button id="move-note" onclick="moveNote(this)"><i class="fa-solid fa-paper-plane"></i></button>
-        <button id="rename-note"><i class="fa-solid fa-pen"></i></button>
+        <button id="rename-note" onclick="renameNote(this)"><i class="fa-solid fa-pen"></i></button>
         <button id="delete-note" onclick="deleteCard(this)"><i class="fa-regular fa-circle-xmark"></i></button>
     </div>
 </div>`;
@@ -25,9 +26,6 @@ function addCard(button) {
     let list = document.querySelector(`#${parent.id} > div`);
     //Adicionando um novo card a lista
     list.innerHTML += newCard(totalCard);
-    //Pegando referencias do novo card
-    let newCardDiv = document.getElementById(totalCard);
-    let newCardP = document.getElementById(`p${totalCard}`);
 
     totalCard++;
 }
@@ -114,7 +112,21 @@ function selectListToMove(section) {
 
 function createCopyDiv(div) {
     let newDiv = document.createElement('div');
+    newDiv.setAttribute('id', div.getAttribute('id'));
     newDiv.setAttribute('class', div.getAttribute('class'));
     newDiv.innerHTML = div.innerHTML;
     return newDiv;
+}
+
+function renameNote(button) {
+    //Condição para não poder continuar essa função
+    if (canMoveNote || creatingNote) return;
+
+    let parent = button.parentNode;
+    let note = parent.parentNode;
+
+    creatingNote = true;
+
+    let p = document.querySelector(`#${note.id} > p`);
+    p.innerHTML = inputName;
 }
