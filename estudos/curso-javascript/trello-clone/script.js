@@ -45,9 +45,15 @@ function deleteCard(button) {
 function setName(button) {
     //Pegando o parent
     let parent = button.parentNode;
-    let name = document.getElementById('note-name').value;
+    let nome = document.getElementById('note-name').value;
 
-    parent.innerHTML = name;
+    //Condições para não poder colocar um nome
+    if (nome.length > 100) {
+        alert('[ERRO] nome muito extenso');
+        return;
+    }
+
+    parent.innerHTML = nome;
     creatingNote = false;
 }
 
@@ -128,5 +134,8 @@ function renameNote(button) {
     creatingNote = true;
 
     let p = document.querySelector(`#${note.id} > p`);
+    let currentName = p.innerHTML;
     p.innerHTML = inputName;
+    let input = document.querySelector(`#${p.id} > input`);
+    input.value = currentName;
 }
