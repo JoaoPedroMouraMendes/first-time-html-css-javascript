@@ -161,6 +161,7 @@ function getMoves(data) {
     for (let index = 0; index < allMoves.length; index++) {
         let span = document.createElement('span');
         span.innerText = `${index+1}. ${data['moves'][index]['move']['name']}`;
+        span.setAttribute('translate', 'no');
         moveList.appendChild(span);
     }
 }
