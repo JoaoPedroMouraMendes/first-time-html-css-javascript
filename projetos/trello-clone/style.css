@@ -154,3 +154,9 @@ button:hover {
     padding: 2px 4px;
     border-radius: 2px;
 }
+
+@media(max-width: 640px) {
+    main {
+        justify-content: center;
+    }
+}

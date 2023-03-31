@@ -26,6 +26,8 @@ function addCard(button) {
     let list = document.querySelector(`#${parent.id} > div`);
     //Adicionando um novo card a lista
     list.innerHTML += newCard(totalCard);
+    let input = document.querySelector(`#${list.id} input`);
+    input.focus();
 
     totalCard++;
 }
@@ -66,7 +68,6 @@ function moveNote(button) {
     let note = parent.parentNode;
     //Criando um clone da nota
     currentDivClone = createCopyDiv(note);
-    console.log(currentDivClone);
 
     //Alterando o visual das sections
     sectionsVisual();
@@ -138,4 +139,5 @@ function renameNote(button) {
     p.innerHTML = inputName;
     let input = document.querySelector(`#${p.id} > input`);
     input.value = currentName;
+    input.focus();
 }
