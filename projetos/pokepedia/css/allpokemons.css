@@ -53,6 +53,13 @@ main {
 
     background-color: var(--color4);
     border-radius: 8px;
+
+    transition-duration: 0.5s;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05);
+    transition-duration: 0.5s;
 }
 
 .pokemon-header {
