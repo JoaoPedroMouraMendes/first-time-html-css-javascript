@@ -81,15 +81,7 @@ function newTask(content, parent) {
     //Evento para verificar se a tarefa já foi finalizada
     const taskCreated = document.querySelector(`#${taskId} .finished-task`);
     const currentIndex = allTasks.length -1;
-    taskCreated.addEventListener('input', (event) => {
-        if (event.target.checked) {
-            allTasks[currentIndex].taskChecked = true;
-        } else {
-            allTasks[currentIndex].taskChecked = false;
-        }
-        //Salva a alteração
-        saveAllTasks();
-    });
+    setEventsOnLoad(currentIndex, taskId);
 
     //Salva a nova tarefa
     saveAllTasks();
@@ -128,14 +120,19 @@ function hideIcon(task) {
 
 function saveAllTasks() {
     localStorage.tasks = JSON.stringify(allTasks);
-    console.log(allTasks);
+    //Salva o id atual tbm
+    localStorage.setItem('currentId', currentTaskId);
 }
 
 function loadAllTasks(taskParent) {
     //Se ainda não existir nenhum save das tarefas
-    if (!localStorage.tasks) return;
+    if (!localStorage.tasks || !localStorage.currentId) return;
 
     allTasks = JSON.parse(localStorage.getItem('tasks'));
+    currentTaskId = localStorage.getItem('currentId');
+
+    //Reseta a variável currentTaskId se o array de tarefas estiver vazio
+    if (allTasks.length === 0) currentTaskId = 0;
 
     spawnAllTasks(taskParent);
 }
@@ -159,5 +156,6 @@ function setEventsOnLoad(index, taskId) {
         }
         //Salva a alteração
         saveAllTasks();
+        console.log(allTasks);
     });
 }
