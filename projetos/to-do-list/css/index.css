@@ -57,7 +57,7 @@ header span {
     max-width: 500px;
     border-radius: 5px;
     margin: auto;
-    padding: 20px 0px;
+    padding-top: 20px;
 
     background-color: white;
 }
@@ -116,6 +116,26 @@ form {
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+#to-do-list h2{
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#to-do-finish {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 0px 0px 5px 5px;
+
+    background-color: rgb(173, 173, 173);
+}
+
+#to-do-finish h2{
+    font-size: 1.2em;
+    text-align: center;
 }
 
 .task {

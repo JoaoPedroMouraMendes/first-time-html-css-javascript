@@ -1,5 +1,7 @@
 var currentTaskId = 0;
 var allTasks = [];
+//Div de tarefas finalizadas
+var toDoFinish = document.getElementById('to-do-finish');
 
 //Classe de uma tarefa
 class task {
@@ -81,7 +83,7 @@ function newTask(content, parent) {
     //Evento para verificar se a tarefa já foi finalizada
     const taskCreated = document.querySelector(`#${taskId} .finished-task`);
     const currentIndex = allTasks.length -1;
-    setEventsOnLoad(currentIndex, taskId);
+    setEventsOnLoad(currentIndex, taskId, parent);
 
     //Salva a nova tarefa
     saveAllTasks();
@@ -139,23 +141,32 @@ function loadAllTasks(taskParent) {
 
 function spawnAllTasks(taskParent) {
     allTasks.map((array, index) => {
-        taskParent.appendChild(loadTask(array.taskId, array.taskClass, array.contentHTML, array.taskChecked));
+        //Caso a tarefa já ter sido finalizada
+        let destination;
+        if (array.taskChecked) destination = toDoFinish;
+        else destination = taskParent;
+
+        destination.appendChild(loadTask(array.taskId, array.taskClass, array.contentHTML, array.taskChecked));
         //Setar os eventos
-        setEventsOnLoad(index, array.taskId);
+        setEventsOnLoad(index, array.taskId, taskParent);
     });
 }
 
-function setEventsOnLoad(index, taskId) {
+function setEventsOnLoad(index, taskId, taskParent) {
     //Evento para verificar se a tarefa já foi finalizada
-    const taskCreated = document.querySelector(`#${taskId} .finished-task`);
-    taskCreated.addEventListener('input', (event) => {
+    const checkbox = document.querySelector(`#${taskId} .finished-task`);
+    const task = document.getElementById(taskId);
+    checkbox.addEventListener('input', (event) => {
         if (event.target.checked) {
             allTasks[index].taskChecked = true;
+            task.remove();
+            toDoFinish.appendChild(task);
         } else {
             allTasks[index].taskChecked = false;
+            task.remove();
+            taskParent.appendChild(task);
         }
         //Salva a alteração
         saveAllTasks();
-        console.log(allTasks);
     });
 }
