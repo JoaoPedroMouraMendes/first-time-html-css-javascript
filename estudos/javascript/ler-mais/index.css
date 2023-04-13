@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 20px;
+    padding: 20px;
+
+    background-color: #444444;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 20px;
+
+    background-color: #6d6d6d;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
+
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    border: 15px solid transparent;
+    border-top: 15px solid #591EEA;
+    border-right: 15px solid #591EEA;
+}
+
+.card img {
+    width: 210px;
+    margin-bottom: 15px;
+}
+
+.card h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card p {
+    text-align: justify;
+    margin-bottom: 10px;
+
+    position: relative;
+}
+
+.card .hide-text::before {
+    content: '';
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    background-image: linear-gradient(to bottom, transparent, #6d6d6d);
+}
+
+.hide-text {
+    height: 120px;
+    overflow: hidden;
+
+    transition: all 0.5s;
+}
+
+.card button {
+    height: 35px;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    color: #591EEA;
+
+    transition-duration: 0.4s;
+}
+
+.card button:hover {
+    border-radius: 5px;
+    cursor: pointer;
+    color: #591EEA;
+
+    transition-duration: 0.4s;
+}
