@@ -9,3 +9,15 @@
  :white_check_mark: Pequenos projetos para estudos;
 
  :white_check_mark: Meus projetos para reforçar meu conhecimento, nele pode se encontrar clones de sites e projetos de minha autonomia.
+
+Principais projetos desse repositório:
+
+:point_right: [PokéPédia;](https://edwardhp.github.io/html-css-javascript/projetos/pokepedia/)
+
+:point_right: [To do list](https://edwardhp.github.io/html-css-javascript/projetos/to-do-list/);
+
+:point_right: [Trello-clone](https://edwardhp.github.io/html-css-javascript/projetos/trello-clone/);
+
+:point_right: [Android](https://edwardhp.github.io/html-css-javascript/projetos/android/android.html);
+
+:point_right: [Cordel](https://edwardhp.github.io/html-css-javascript/projetos/cordel/cordel-milton-duarte.html).
