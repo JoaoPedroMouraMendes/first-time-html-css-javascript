@@ -40,6 +40,7 @@ class Calculator {
         }
 
         //Só passa para a próxima operação se o previousOp ser vázio
+        if (operator == '=' && this.previousOp.innerText == '') return;
         if (this.previousOp.innerText == '') {
             this.previousOp.innerText = `${this.currentOp.innerText} ${operator}`;
 
@@ -48,6 +49,9 @@ class Calculator {
         }
         //Altera o operador 
         else if (this.currentOp.innerText == '') {
+            //Evita que coloque o sinal de igual como operação da conta
+            if (operator == '=') return;
+            //Troca o sinal aritmético
             this.previousOp.innerText = `${this.previousOp.innerText.slice(0, -1)} ${operator}`;
             return;
         }
