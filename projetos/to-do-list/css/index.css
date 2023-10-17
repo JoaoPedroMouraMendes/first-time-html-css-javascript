@@ -5,8 +5,9 @@
 :root {
     --color0: #242424;
     --color1: #ffcd37;
-    --color2: #fdb415;
-    --color3: #e9660f;
+    --color2: #9477e6;
+    --color3: #724ed4;
+
 
     --main-font: 'Open Sans', sans-serif;
 }
@@ -35,11 +36,12 @@ header {
     padding: 10px 0px;
     min-width: 320px;
     max-width: 500px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: auto;
     margin-bottom: 50px;
 
     background-color: var(--color1);
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 header h1 {
@@ -55,11 +57,12 @@ header span {
 #list-body {
     min-width: 320px;
     max-width: 500px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: auto;
     padding-top: 20px;
 
     background-color: white;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 form {
@@ -85,7 +88,7 @@ form {
     border-radius: 50%;
     border: none;
 
-    background-color: var(--color1);
+    background-color: var(--color2);
 
     transition-duration: 0.5s;
 }
@@ -94,7 +97,7 @@ form {
     cursor: pointer;
     transform: scale(1.25);
 
-    background-color: var(--color2);
+    background-color: var(--color3);
 
     transition-duration: 0.5s;
 }
@@ -130,7 +133,7 @@ form {
     margin-top: 20px;
     border-radius: 0px 0px 5px 5px;
 
-    background-color: rgb(173, 173, 173);
+    background-color: var(--color2);
 }
 
 #to-do-finish h2{
