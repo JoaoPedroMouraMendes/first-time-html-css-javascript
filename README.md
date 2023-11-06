@@ -12,12 +12,12 @@
 
 Principais projetos desse repositório:
 
-:point_right: [PokéPédia;](https://joaopedromouramendes.github.io/html-css-javascript/projetos/pokepedia/)
+:point_right: [PokéPédia;](https://joaopedromouramendes.github.io/primeiros-contatos-html-css-javascript/projetos/pokepedia/)
 
-:point_right: [To do list](https://joaopedromouramendes.github.io/html-css-javascript/projetos/to-do-list/);
+:point_right: [To do list](https://joaopedromouramendes.github.io/primeiros-contatos-html-css-javascript/projetos/to-do-list/);
 
-:point_right: [Trello-clone](https://joaopedromouramendes.github.io/html-css-javascript/projetos/trello-clone/);
+:point_right: [Trello-clone](https://joaopedromouramendes.github.io/primeiros-contatos-html-css-javascript/projetos/trello-clone/);
 
-:point_right: [Android](https://joaopedromouramendes.github.io/html-css-javascript/projetos/android/android.html);
+:point_right: [Android](https://joaopedromouramendes.github.io/primeiros-contatos-html-css-javascript/projetos/android/android.html);
 
-:point_right: [Cordel](https://joaopedromouramendes.github.io/html-css-javascript/projetos/cordel/cordel-milton-duarte.html).
+:point_right: [Cordel](https://joaopedromouramendes.github.io/primeiros-contatos-html-css-javascript/projetos/cordel/cordel-milton-duarte.html).
